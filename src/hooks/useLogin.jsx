@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import toast from "react-hot-toast";
+
 import { toastOptions } from "../helperFunctions";
 
 export const useLogin = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [inputType, setInputType] = useState("password");
   const [loginDetails, setLoginDetails] = useState({
@@ -23,7 +27,8 @@ export const useLogin = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
+    return navigate("/overview");
     const { email, password } = loginDetails;
     if (!email || !password) {
       toast.error(`Please fill all fields!`, toastOptions);

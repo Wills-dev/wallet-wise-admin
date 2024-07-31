@@ -22,7 +22,11 @@ const Login = () => {
     <AuthLayout>
       <h2 className="text-2xl">Welcome to Wallet wise! 👋</h2>
       <p className="py-3 text-gray-500">Please sign-in to your account</p>
-      <form action="" className="py-4 flex gap-6 flex-col w-full">
+      <form
+        action=""
+        className="py-4 flex gap-6 flex-col w-full"
+        onSubmit={(e) => handleSubmit()}
+      >
         <div className="w-full">
           <label htmlFor="email" className="font-light">
             Email
@@ -68,7 +72,10 @@ const Login = () => {
             Forgot Password?
           </Link>
         </div>
-        <button className="w-full h-10 bg-[#696cff] rounded-md text-white hover:bg-[#8284fb] transition-all">
+        <button
+          type="submit"
+          className="w-full h-10 bg-[#696cff] rounded-md text-white hover:bg-[#8284fb] transition-all"
+        >
           Sign in
         </button>
       </form>
