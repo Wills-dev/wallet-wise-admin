@@ -7,7 +7,7 @@ const AuthLayout = ({ children }) => {
         <div className="absolute top-6 left-6 font-light italic">
           Wallet-wise
         </div>
-        <div className="w-2/3 h-full bg-purple-100 max-lg:hidden">
+        <div className="w-2/3 h-full bg-purple-50 max-lg:hidden">
           <img
             src="/assets/images/auth-img.png"
             alt="auth-image"
