@@ -32,7 +32,7 @@ const DashboardLayout = ({ children }) => {
           </button>
         </div>
         <Sidebar />
-        {themeSettings && <ThemeSettings />}
+        <AnimatePresence>{themeSettings && <ThemeSettings />}</AnimatePresence>
         <AnimatePresence>
           <motion.div
             className="relative"
