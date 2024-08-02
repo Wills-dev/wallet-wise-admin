@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import Overview from "./pages/Overview/Overview";
 import Analytics from "./pages/Analytics/Analytics";
+import Tickets from "./pages/Tickets/Tickets";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/tickets" element={<Tickets />} />
         </Routes>
       </ContextProvider>
     </>

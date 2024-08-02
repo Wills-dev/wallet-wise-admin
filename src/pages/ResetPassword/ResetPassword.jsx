@@ -15,7 +15,7 @@ const ResetPassword = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/reset-passowrd");
+    navigate("/overview");
   };
 
   return (
