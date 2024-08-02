@@ -93,7 +93,10 @@ const Sidebar = () => {
                     <motion.div
                       className="flex-center-between cursor-pointer text-gray-400 hover:text-gray-800 transition-all  m-3 mt-4 pr-3"
                       initial={{ opacity: 0 }}
-                      animate={{ opacity: activeMenu ? 1 : 0 }}
+                      animate={{
+                        opacity: 1,
+                        display: activeMenu ? "flex" : "none",
+                      }}
                       exit={{ opacity: 0 }}
                       transition={{
                         duration: 0.3,
@@ -106,7 +109,11 @@ const Sidebar = () => {
                         className=""
                         initial={{ rotate: 0 }}
                         animate={{
-                          rotate: index === showDropdown ? 90 : 0,
+                          rotate:
+                            items.title === "Services" &&
+                            activeTitle === "Services"
+                              ? 90
+                              : 0,
                         }}
                       >
                         {" "}
@@ -116,7 +123,10 @@ const Sidebar = () => {
                   ) : (
                     <motion.p
                       initial={{ opacity: 0 }}
-                      animate={{ opacity: activeMenu ? 1 : 0 }}
+                      animate={{
+                        opacity: 1,
+                        display: activeMenu ? "block" : "none",
+                      }}
                       exit={{ opacity: 0 }}
                       transition={{
                         duration: 0.3,
@@ -157,7 +167,7 @@ const Sidebar = () => {
                               <motion.span
                                 initial={{ opacity: 0 }}
                                 animate={{
-                                  fontSize: activeMenu ? "14px" : "20px",
+                                  fontSize: activeMenu ? "18px" : "24px",
                                   opacity: 1,
                                 }}
                                 exit={{ opacity: 0 }}
@@ -205,7 +215,7 @@ const Sidebar = () => {
                           <motion.span
                             initial={{ opacity: 0 }}
                             animate={{
-                              fontSize: activeMenu ? "14px" : "20px",
+                              fontSize: activeMenu ? "18px" : "24px",
                               opacity: 1,
                             }}
                             exit={{ opacity: 0 }}
