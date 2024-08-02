@@ -17,17 +17,17 @@ const Overview = () => {
     <DashboardLayout>
       <div className="padding-x py-24 flex flex-col gap-6 ">
         <div className="flex gap-6 flex-wrap">
-          <div className="bg-white dark:bg-secondary-dark-bg min-w-[350px]  dark:text-white flex-1 shadow p-4 rounded-lg">
+          <div className="bg-white dark:bg-secondary-dark-bg min-w-[300px]  dark:text-white flex-1 shadow p-4 rounded-lg">
             <h6 className="font-bold text-gray-400">Earnings</h6>
             <p className="text-xl font-light">$20,000,000</p>
             <SingleAreaChart />
           </div>
-          <div className="min-w-[350px] flex-1">
+          <div className="min-w-[300px] flex-1">
             {" "}
             <UserPieChart />
           </div>
 
-          <div className="  min-w-[350px]  dark:text-white flex-1 flex flex-col gap-6">
+          <div className="  min-w-[300px]  dark:text-white flex-1 flex flex-col gap-6">
             <div className="flex-center flex-1 gap-2 bg-white dark:bg-secondary-dark-bg shadow p-4 rounded-lg ">
               <div className="h-14 w-14 bg-green-100 text-green-400 text-xl flex-center justify-center rounded-full">
                 <GoIssueReopened />
