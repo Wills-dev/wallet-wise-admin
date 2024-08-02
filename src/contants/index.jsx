@@ -2,15 +2,23 @@ import {
   AiOutlineAreaChart,
   AiOutlineBarChart,
   AiOutlineCalendar,
-  AiOutlineShoppingCart,
+  AiOutlineSecurityScan,
   AiOutlineStock,
 } from "react-icons/ai";
-import { BiColorFill } from "react-icons/bi";
+import { BiColorFill, BiSolidPlaneAlt } from "react-icons/bi";
 import { BsBarChart, BsKanban } from "react-icons/bs";
-import { FiEdit, FiPieChart } from "react-icons/fi";
+import { FiEdit, FiMessageSquare, FiPieChart, FiUsers } from "react-icons/fi";
 import { GiLouvrePyramid } from "react-icons/gi";
-import { IoMdContacts } from "react-icons/io";
-import { RiContactsLine, RiStockLine } from "react-icons/ri";
+import { IoHomeOutline, IoPhonePortraitOutline } from "react-icons/io5";
+import { RiAccountCircleLine, RiStockLine } from "react-icons/ri";
+import { PiTelevisionSimple } from "react-icons/pi";
+import { IoIosFootball } from "react-icons/io";
+import { GoDatabase, GoGift } from "react-icons/go";
+import { FaQuestion, FaRegLightbulb, FaRegUser } from "react-icons/fa";
+import { MdNotInterested, MdOutlineStickyNote2 } from "react-icons/md";
+import { CiCreditCard1 } from "react-icons/ci";
+import { FaRegMessage } from "react-icons/fa6";
+import { GrSecure } from "react-icons/gr";
 
 export const links = [
   {
@@ -20,82 +28,102 @@ export const links = [
         name: "overview",
         icon: <AiOutlineBarChart />,
       },
-    ],
-  },
-
-  {
-    title: "Pages",
-    links: [
       {
-        name: "orders",
-        icon: <AiOutlineShoppingCart />,
-      },
-      {
-        name: "employees",
-        icon: <IoMdContacts />,
-      },
-      {
-        name: "customers",
-        icon: <RiContactsLine />,
-      },
-    ],
-  },
-  {
-    title: "Apps",
-    links: [
-      {
-        name: "calendar",
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: "kanban",
-        icon: <BsKanban />,
-      },
-      {
-        name: "editor",
-        icon: <FiEdit />,
-      },
-      {
-        name: "color-picker",
-        icon: <BiColorFill />,
-      },
-    ],
-  },
-  {
-    title: "Charts",
-    links: [
-      {
-        name: "line",
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: "area",
+        name: "analytics",
         icon: <AiOutlineAreaChart />,
       },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      {
+        name: "tickets",
+        icon: <MdOutlineStickyNote2 />,
+      },
+      {
+        name: "message-center",
+        icon: <FiMessageSquare />,
+      },
+      {
+        name: "faq",
+        icon: <FaQuestion />,
+      },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      {
+        name: "Airtime",
+        icon: <IoPhonePortraitOutline />,
+      },
+      {
+        name: "cable",
+        icon: <PiTelevisionSimple />,
+      },
+      {
+        name: "data",
+        icon: <GoDatabase />,
+      },
+      {
+        name: "betting",
+        icon: <IoIosFootball />,
+      },
+      {
+        name: "electricity",
+        icon: <FaRegLightbulb />,
+      },
+      {
+        name: "giftcards",
+        icon: <GoGift />,
+      },
+      {
+        name: "book-flight",
+        icon: <BiSolidPlaneAlt />,
+      },
+      {
+        name: "virtual-card",
+        icon: <CiCreditCard1 />,
+      },
+      {
+        name: "hotel-reservations",
+        icon: <IoHomeOutline />,
+      },
+    ],
+  },
 
+  {
+    title: "User Management",
+    links: [
       {
-        name: "bar",
-        icon: <AiOutlineBarChart />,
+        name: "manage-admin",
+        icon: <FaRegUser />,
       },
       {
-        name: "pie",
-        icon: <FiPieChart />,
+        name: "manage-user",
+        icon: <FiUsers />,
       },
       {
-        name: "financial",
-        icon: <RiStockLine />,
+        name: "roles",
+        icon: <AiOutlineSecurityScan />,
       },
       {
-        name: "color-mapping",
-        icon: <BsBarChart />,
+        name: "permission",
+        icon: <MdNotInterested />,
+      },
+    ],
+  },
+  {
+    title: "My Account",
+    links: [
+      {
+        name: "profile",
+        icon: <RiAccountCircleLine />,
       },
       {
-        name: "pyramid",
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: "stacked",
-        icon: <AiOutlineBarChart />,
+        name: "security",
+        icon: <GrSecure />,
       },
     ],
   },
@@ -126,4 +154,33 @@ export const themeColors = [
     color: "#FB9678",
     name: "orange-theme",
   },
+];
+
+export const revenue = [
+  { month: "January", desktop: 186 },
+  { month: "February", desktop: 305 },
+  { month: "March", desktop: 237 },
+  { month: "April", desktop: 73 },
+  { month: "May", desktop: 209 },
+  { month: "June", desktop: 214 },
+  { month: "July", desktop: 614 },
+  { month: "August", desktop: 114 },
+  { month: "Semptember", desktop: 214 },
+  { month: "October", desktop: 214 },
+  { month: "November", desktop: 84 },
+  { month: "December", desktop: 280 },
+];
+export const profit = [
+  { month: "January", desktop: 16 },
+  { month: "February", desktop: 35 },
+  { month: "March", desktop: 97 },
+  { month: "April", desktop: 73 },
+  { month: "May", desktop: 129 },
+  { month: "June", desktop: 24 },
+  { month: "July", desktop: 64 },
+  { month: "August", desktop: 54 },
+  { month: "Semptember", desktop: 74 },
+  { month: "October", desktop: 25 },
+  { month: "November", desktop: 84 },
+  { month: "December", desktop: 20 },
 ];
