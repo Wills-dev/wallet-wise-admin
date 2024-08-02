@@ -13,9 +13,13 @@ import { IoHomeOutline, IoPhonePortraitOutline } from "react-icons/io5";
 import { RiAccountCircleLine, RiStockLine } from "react-icons/ri";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { IoIosFootball } from "react-icons/io";
-import { GoDatabase, GoGift } from "react-icons/go";
+import { GoDatabase, GoGift, GoQuestion } from "react-icons/go";
 import { FaQuestion, FaRegLightbulb, FaRegUser } from "react-icons/fa";
-import { MdNotInterested, MdOutlineStickyNote2 } from "react-icons/md";
+import {
+  MdNotInterested,
+  MdOutlineStickyNote2,
+  MdOutlineVerifiedUser,
+} from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
 import { FaRegMessage } from "react-icons/fa6";
 import { GrSecure } from "react-icons/gr";
@@ -47,7 +51,7 @@ export const links = [
       },
       {
         name: "faq",
-        icon: <FaQuestion />,
+        icon: <GoQuestion />,
       },
     ],
   },
@@ -106,7 +110,7 @@ export const links = [
       },
       {
         name: "roles",
-        icon: <AiOutlineSecurityScan />,
+        icon: <MdOutlineVerifiedUser />,
       },
       {
         name: "permission",
@@ -183,4 +187,151 @@ export const profit = [
   { month: "October", desktop: 25 },
   { month: "November", desktop: 84 },
   { month: "December", desktop: 20 },
+];
+
+export const services = [
+  {
+    name: "Airtime",
+    icon: <IoPhonePortraitOutline />,
+    color: "rgb(239 68 68)",
+    bgColor: "rgb(254 242 242)",
+  },
+  {
+    name: "cable",
+    icon: <PiTelevisionSimple />,
+    color: "rgb(34 197 94)",
+    bgColor: "rgb(240 253 244)",
+  },
+  {
+    name: "data",
+    icon: <GoDatabase />,
+    color: "rgb(59 130 246)",
+    bgColor: "rgb(239 246 255)",
+  },
+  {
+    name: "betting",
+    icon: <IoIosFootball />,
+    color: "rgb(234 179 8)",
+    bgColor: "rgb(254 252 232)",
+  },
+  {
+    name: "electricity",
+    icon: <FaRegLightbulb />,
+    color: "rgb(236 72 153)",
+    bgColor: "rgb(253 242 248)",
+  },
+  {
+    name: "giftcards",
+    icon: <GoGift />,
+    color: "rgb(168 85 247)",
+    bgColor: "rgb(250 245 255)",
+  },
+  {
+    name: "book-flight",
+    icon: <BiSolidPlaneAlt />,
+    color: "rgb(100 116 139)",
+    bgColor: "rgb(248 250 252)",
+  },
+  {
+    name: "virtual-card",
+    icon: <CiCreditCard1 />,
+    color: "rgb(34 197 94)",
+    bgColor: "rgb(240 253 244)",
+  },
+  {
+    name: "hotel-reservations",
+    icon: <IoHomeOutline />,
+    color: "rgb(239 68 68)",
+    bgColor: "rgb(254 242 242)",
+  },
+];
+
+export const topServices = [
+  {
+    name: "Airtime",
+    amount: 200000,
+  },
+  {
+    name: "cable",
+    amount: 4032000,
+  },
+  {
+    name: "data",
+    amount: 40200030,
+  },
+  {
+    name: "betting",
+    amount: 2013355555,
+  },
+  {
+    name: "electricity",
+    amount: 40000,
+  },
+  {
+    name: "giftcards",
+    amount: 2000,
+  },
+  {
+    name: "book-flight",
+    amount: 50000,
+  },
+  {
+    name: "virtual-card",
+    amount: 200000,
+  },
+  {
+    name: "hotel-reservations",
+    amount: 900,
+  },
+];
+
+export const topTransactions = [
+  {
+    firstName: "Asewaju",
+    lastName: "Bola",
+    amount: 450000000,
+    service: "betting",
+  },
+  {
+    firstName: "Lydia",
+    lastName: "Kelechi",
+    amount: 30000000,
+    service: "Cable",
+  },
+  {
+    firstName: "Judah",
+    lastName: "Onuegbu",
+    amount: 2800000,
+    service: "Electricity",
+  },
+  {
+    firstName: "Big",
+    lastName: "Head",
+    amount: 2000000,
+    service: "betting",
+  },
+  {
+    firstName: "Tinubu",
+    lastName: "Bola",
+    amount: 1900000,
+    service: "book flight",
+  },
+  {
+    firstName: "Asewaju",
+    lastName: "Bola",
+    amount: 1500000,
+    service: "betting",
+  },
+  {
+    firstName: "Asewaju",
+    lastName: "Bola",
+    amount: 1250000,
+    service: "betting",
+  },
+  {
+    firstName: "Asewaju",
+    lastName: "Bola",
+    amount: 300000,
+    service: "betting",
+  },
 ];

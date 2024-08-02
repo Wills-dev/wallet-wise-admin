@@ -85,7 +85,6 @@ const NavBar = () => {
                   />
                   <span className="block absolute h-3 w-3 rounded-full bg-green-500 bottom-0 right-1 border-1 border-white" />
                 </div>
-                <p className="text-sm text-gray-500">Hi Wills</p>
                 <AnimatePresence>
                   {isOpen && <ProfileDropdown />}
                 </AnimatePresence>

@@ -6,6 +6,7 @@ import { ContextProvider } from "./context/ContextProvider";
 
 import Login from "./pages/Login/Login";
 import Overview from "./pages/Overview/Overview";
+import Analytics from "./pages/Analytics/Analytics";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/overview" element={<Overview />} />
+          <Route path="/analytics" element={<Analytics />} />
         </Routes>
       </ContextProvider>
     </>
