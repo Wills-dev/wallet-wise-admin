@@ -32,7 +32,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: #0f0f0f;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -83,5 +83,16 @@
 
   .padding-y {
     @apply sm:py-20 py-10;
+  }
+
+  .margin-x {
+    @apply xl:mx-[2rem] lg:mx-[2rem] sm:mx-[1rem] mx-3;
+  }
+  .flex-center-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-center {
+    @apply flex  items-center;
   }
 }

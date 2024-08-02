@@ -13,12 +13,8 @@ const NavBar = () => {
   const {
     activeMenu,
     setActiveMenu,
-    isClicked,
-    setIsClicked,
-    handleClick,
     screenSize,
     setScreenSize,
-    currentColor,
     currentMode,
     setIsLargeScreen,
     isLargeScreen,
@@ -55,7 +51,7 @@ const NavBar = () => {
 
   return (
     <AnimatePresence>
-      <motion.div className="fixed w-full sm:pt-8  pt-5 top-0 right-0 left-0 z-10 ">
+      <motion.div className="fixed w-full  top-0 right-0 left-0 z-10 ">
         <motion.div
           initial={{ paddingLeft: "0" }}
           animate={
@@ -64,9 +60,9 @@ const NavBar = () => {
               : { paddingLeft: "70px" }
           }
         >
-          <div className="padding-x backdrop-blur">
+          <div className="margin-x pt-3 backdrop-blur">
             {" "}
-            <div className="bg-white dark:bg-secondary-dark-bg  dark:text-white  p-4 w-full rounded-md shadow  flex justify-end items-center gap-4">
+            <div className="bg-white dark:bg-secondary-dark-bg   dark:text-white  px-4 py-2 w-full rounded-md shadow  flex justify-end items-center gap-4">
               <button className="text-2xl relative" onClick={toggleMode}>
                 <CgDarkMode />
               </button>

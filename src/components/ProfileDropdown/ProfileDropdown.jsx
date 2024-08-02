@@ -29,7 +29,7 @@ const ProfileDropdown = () => {
         duration: 0.3,
         ease: [0.61, 1, 0.88, 1],
       }}
-      className=" absolute top-16 right-0 bg-white text-gray-500 dark:bg-secondary-dark-bg   rounded-lg shadow w-52 z-30"
+      className=" absolute top-14 right-0 bg-white text-gray-500 dark:bg-secondary-dark-bg   rounded-lg shadow w-52 z-30"
     >
       <div className="py-3 px-4 border-b-1 border-gray-300 flex gap-2">
         <div className="relative h-10 w-10">

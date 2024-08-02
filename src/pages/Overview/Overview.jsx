@@ -1,57 +1,85 @@
 import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { FiSettings } from "react-icons/fi";
 
-import { useStateContext } from "../../context/ContextProvider";
+import { DateDropdown } from "@/components/DateDropdown/DateDropdown";
 
-import Sidebar from "@/components/Sidebar/Sidebar";
-import ThemeSettings from "@/components/ThemeSettings/ThemeSettings";
-import NavBar from "@/components/NavBar/NavBar";
+import { SingleBarChart } from "@/components/SingleBarChart/SingleBarChart";
+import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
+import { profit, revenue } from "@/contants";
+import { SingleAreaChart } from "@/components/SingleAreaChart/SingleAreaChart";
+import { UserPieChart } from "@/components/Charts/UserPieChart";
+import { GoIssueReopened } from "react-icons/go";
+import { FaUsers } from "react-icons/fa";
 
 const Overview = () => {
-  const {
-    activeMenu,
-    themeSettings,
-    setThemeSettings,
-    currentColor,
-    currentMode,
-    screenSize,
-    isLargeScreen,
-  } = useStateContext();
-
   return (
-    <div className={currentMode === "Dark" ? "dark" : ""}>
-      <div className=" relative bg-main-bg dark:bg-main-dark-bg w-full min-h-screen">
-        <div className="fixed right-0 top-[20%] z-[1000]">
-          <button
-            type="button"
-            className="text-xl px-3 py-2 hover:drop-shadow-xl hover:bg-light-gray text-white rounded-l"
-            style={{ background: currentColor }}
-            onClick={() => setThemeSettings((prev) => !prev)}
-          >
-            <FiSettings />
-          </button>
-        </div>
-        <Sidebar />
-        {themeSettings && <ThemeSettings />}
-        <AnimatePresence>
-          <motion.div
-            className="relative"
-            initial={{ paddingLeft: "0" }}
-            animate={
-              isLargeScreen
-                ? { paddingLeft: activeMenu ? "250px" : "70px" }
-                : { paddingLeft: "70px" }
-            }
-          >
-            <div className="margin-x relative">
-              <NavBar />
+    <DashboardLayout>
+      <div className="padding-x py-24 flex flex-col gap-6 ">
+        <div className="flex gap-6 flex-wrap">
+          <div className="bg-white dark:bg-secondary-dark-bg min-w-[350px]  dark:text-white flex-1 shadow p-4 rounded-lg">
+            <h6 className="font-bold text-gray-400">Earnings</h6>
+            <p className="text-xl font-light">$20,000,000</p>
+            <SingleAreaChart />
+          </div>
+          <div className="min-w-[350px] flex-1">
+            {" "}
+            <UserPieChart />
+          </div>
+
+          <div className="  min-w-[350px]  dark:text-white flex-1 flex flex-col gap-6">
+            <div className="flex-center flex-1 gap-2 bg-white dark:bg-secondary-dark-bg shadow p-4 rounded-lg ">
+              <div className="h-14 w-14 bg-green-100 text-green-400 text-xl flex-center justify-center rounded-full">
+                <GoIssueReopened />
+              </div>
+              <div className="">
+                <h6 className="font-bold text-gray-400">Open Tickets</h6>
+                <p className="text-xl font-light">50</p>
+              </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+            <div className="flex-center flex-1 gap-2 bg-white dark:bg-secondary-dark-bg shadow p-4 rounded-lg ">
+              <div className="h-14 w-14 bg-purple-100 text-purple-400 text-xl flex-center justify-center rounded-full">
+                <FaUsers />
+              </div>
+              <div className="">
+                <h6 className="font-bold text-gray-400">Coverage</h6>
+                <p className="text-xl font-light">12 Countries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-6  max-lg:flex-col">
+          <div className="bg-white dark:bg-secondary-dark-bg   dark:text-white flex-1 p-4     shadow rounded-lg">
+            <div className="flex-center-between">
+              {" "}
+              <h3 className="text-xl font-light">Revenue</h3>
+              <DateDropdown />
+            </div>
+            <div className="">
+              <SingleBarChart
+                dataTitle="revenue"
+                barColor="#4535C1"
+                chartData={revenue}
+              />
+            </div>
+          </div>
+          <div className="bg-white dark:bg-secondary-dark-bg   dark:text-white flex-1 p-4 shadow rounded-lg">
+            <div className="flex-center-between">
+              {" "}
+              <h3 className="text-xl font-light"> Profit</h3>
+              <DateDropdown />
+            </div>
+            <div className="">
+              <SingleBarChart
+                dataTitle="profit"
+                barColor="#36C2CE"
+                chartData={profit}
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
