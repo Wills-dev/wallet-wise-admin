@@ -1,7 +1,6 @@
 import React from "react";
 
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import { useLogin } from "../../hooks/useLogin";
