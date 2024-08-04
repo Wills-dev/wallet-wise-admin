@@ -73,7 +73,7 @@ const Sidebar = () => {
                     ease: [0.61, 1, 0.88, 1],
                   }}
                 >
-                  Wallet wise
+                  WalletWise
                 </motion.p>
               </Link>
               <motion.button
