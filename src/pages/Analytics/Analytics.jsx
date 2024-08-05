@@ -15,7 +15,7 @@ const Analytics = () => {
   return (
     <DashboardLayout>
       <div className="padding-x py-24 flex flex-col gap-6 dark:text-white">
-        <div className="flex-center gap-3">
+        <div className="flex-center gap-3 max-sm:flex-col max-sm:hidden">
           <label htmlFor="" className="text-gray-400">
             Filter data
           </label>{" "}

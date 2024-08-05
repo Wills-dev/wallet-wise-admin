@@ -22,7 +22,7 @@ export function DataTablePagination({ table }) {
         {table.getFilteredRowModel().rows.length} row(s) selected.
       </div> */}
       <div className="flex items-center justify-between ">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 max-sm:hidden">
           <p className="text-sm font-medium">Rows per page</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}

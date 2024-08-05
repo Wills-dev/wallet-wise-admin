@@ -62,7 +62,7 @@ export function DataTable({ columns, data }) {
           }
           className="max-w-sm outline-none  focus-within:border-none bg-white  dark:bg-secondary-dark-bg"
         />
-        <DropdownMenu>
+        <DropdownMenu className="max-sm:hidden">
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
               Columns
