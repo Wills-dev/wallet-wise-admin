@@ -23,7 +23,7 @@ export function DataTablePagination({ table }) {
       </div> */}
       <div className="flex items-center justify-between ">
         <div className="flex items-center space-x-2 max-sm:hidden">
-          <p className="text-sm font-medium">Rows per page</p>
+          <p className="text-sm font-medium">Show</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={(value) => {
@@ -41,6 +41,7 @@ export function DataTablePagination({ table }) {
               ))}
             </SelectContent>
           </Select>
+          <p className="text-sm font-medium">entries</p>
         </div>
         <div className="flex-center gap-2">
           <div className="flex w-[100px] items-center justify-center text-sm font-medium">
