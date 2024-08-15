@@ -13,10 +13,7 @@ import { Link } from "react-router-dom";
 
 const columnHelper = createColumnHelper();
 
-export const columns = [
-  columnHelper.accessor("id", {
-    header: "Ticket ID",
-  }),
+export const adminColumns = [
   columnHelper.accessor("user", {
     header: "Full name",
   }),
@@ -33,17 +30,8 @@ export const columns = [
       );
     },
   }),
-  columnHelper.accessor("amount", {
-    header: () => <div className="">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className=" font-medium">{formatted}</div>;
-    },
+  columnHelper.accessor("role", {
+    header: "Role",
   }),
   columnHelper.accessor("status", {
     header: "Status",
@@ -64,16 +52,15 @@ export const columns = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(ticket.id)}
-            >
-              Copy ticket ID
-            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link to={`/tickets/info/${ticket.id}`}>View ticket</Link>
+              <Link to={`/manage-admin/admin-info/${ticket.id}`}>
+                View details
+              </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem>Close ticket</DropdownMenuItem>
+            <DropdownMenuItem className="text-red-500">
+              Suspend
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

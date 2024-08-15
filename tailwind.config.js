@@ -62,6 +62,10 @@ module.exports = {
         "secondary-dark-bg": "#1a1a1e",
         "light-gray": "#F7F7F7",
         "half-transparent": "rgba(0, 0, 0, 0.5)",
+        "primary-color": "#696cff",
+      },
+      color: {
+        "primary-color": "#696cff",
       },
       borderWidth: {
         1: "1px",
