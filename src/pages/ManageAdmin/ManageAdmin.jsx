@@ -25,7 +25,7 @@ const ManageAdmin = () => {
     <DashboardLayout>
       <div className="padding-x py-24 flex flex-col gap-6 dark:text-white">
         <SummaryCard data={AdminSummary} />
-        <div className="flex justify-end pt-6">
+        <div className="flex justify-end">
           <CreateAdminModal
             handleChange={handleChange}
             handleSubmit={handleSubmit}

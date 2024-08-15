@@ -341,7 +341,7 @@ export const data = [
     id: "728ed52f",
     amount: 100,
     user: "Wills Chisom",
-    status: "open",
+    status: "in progress",
     email: "m@example.com",
   },
   {
@@ -362,7 +362,7 @@ export const data = [
     id: "489e1d422",
     amount: 125,
     user: "Nedz Chinedu",
-    status: "open",
+    status: "in progress",
     email: "exam@gmail.com",
   },
   {
@@ -390,7 +390,7 @@ export const data = [
     id: "489e1d4774",
     amount: 125,
     user: "Wills Victor",
-    status: "open",
+    status: "in progress",
     email: "thole@gmail.com",
   },
   {
@@ -411,14 +411,14 @@ export const data = [
     id: "489443244",
     amount: 125,
     user: "Blessing  Igri",
-    status: "open",
+    status: "in progress",
     email: "judah@gmail.com",
   },
   {
     id: "48244",
     amount: 125,
     user: "Favour Chudy",
-    status: "in progress",
+    status: "escalated",
     email: "kelechi@gmail.com",
   },
 ];

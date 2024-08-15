@@ -47,6 +47,40 @@ export const columns = [
   }),
   columnHelper.accessor("status", {
     header: "Status",
+    cell: ({ row }) => {
+      const status = row.getValue("status");
+      if (status === "pending") {
+        return (
+          <div className="rounded-full text-yellow-400 bg-yellow-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "in progress") {
+        return (
+          <div className="rounded-full text-blue-400 bg-blue-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "resolved") {
+        return (
+          <div className="rounded-full text-green-400 bg-green-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "closed") {
+        return (
+          <div className="rounded-full text-red-400 bg-red-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "escalated") {
+        return (
+          <div className="rounded-full text-red-400 bg-red-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      }
+    },
   }),
 
   {

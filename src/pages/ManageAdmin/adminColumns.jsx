@@ -35,6 +35,28 @@ export const adminColumns = [
   }),
   columnHelper.accessor("status", {
     header: "Status",
+    cell: ({ row }) => {
+      const status = row.getValue("status");
+      if (status === "inactive") {
+        return (
+          <div className="rounded-full text-yellow-400 bg-yellow-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "active") {
+        return (
+          <div className="rounded-full text-green-400 bg-green-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      } else if (status === "suspended") {
+        return (
+          <div className="rounded-full text-red-400 bg-red-50 px-3 py-1 text-center w-32">
+            {status}
+          </div>
+        );
+      }
+    },
   }),
 
   {
