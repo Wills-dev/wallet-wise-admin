@@ -15,17 +15,17 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
+  { month: "January", earnings: 186 },
+  { month: "February", earnings: 305 },
+  { month: "March", earnings: 237 },
+  { month: "April", earnings: 73 },
+  { month: "May", earnings: 209 },
+  { month: "June", earnings: 214 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  earnings: {
+    label: "Earnings",
     color: "hsl(var(--chart-1))",
   },
 };
@@ -56,7 +56,7 @@ export function SingleAreaChart() {
               content={<ChartTooltipContent indicator="line" />}
             />
             <Area
-              dataKey="desktop"
+              dataKey="earnings"
               type="natural"
               fill="#9CDBA6"
               fillOpacity={0.4}

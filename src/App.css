@@ -11,3 +11,8 @@
   background-color: rgb(216, 216, 216);
   border-radius: 40px;
 }
+
+.ql-container {
+  background-color: white;
+  height: 20vh !important;
+}

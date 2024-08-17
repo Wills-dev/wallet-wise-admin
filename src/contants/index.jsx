@@ -1,27 +1,18 @@
-import {
-  AiOutlineAreaChart,
-  AiOutlineBarChart,
-  AiOutlineCalendar,
-  AiOutlineSecurityScan,
-  AiOutlineStock,
-} from "react-icons/ai";
-import { BiColorFill, BiSolidPlaneAlt } from "react-icons/bi";
-import { BsBarChart, BsKanban } from "react-icons/bs";
-import { FiEdit, FiMessageSquare, FiPieChart, FiUsers } from "react-icons/fi";
-import { GiLouvrePyramid } from "react-icons/gi";
+import { AiOutlineAreaChart, AiOutlineBarChart } from "react-icons/ai";
+import { BiSolidPlaneAlt } from "react-icons/bi";
+import { FiMessageSquare, FiUsers } from "react-icons/fi";
 import { IoHomeOutline, IoPhonePortraitOutline } from "react-icons/io5";
-import { RiAccountCircleLine, RiStockLine } from "react-icons/ri";
+import { RiAccountCircleLine } from "react-icons/ri";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { IoIosFootball } from "react-icons/io";
 import { GoDatabase, GoGift, GoQuestion } from "react-icons/go";
-import { FaQuestion, FaRegLightbulb, FaRegUser } from "react-icons/fa";
+import { FaRegLightbulb, FaRegUser } from "react-icons/fa";
 import {
   MdNotInterested,
   MdOutlineStickyNote2,
   MdOutlineVerifiedUser,
 } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
-import { FaRegMessage } from "react-icons/fa6";
 import { GrSecure } from "react-icons/gr";
 
 export const links = [
@@ -45,10 +36,10 @@ export const links = [
         name: "tickets",
         icon: <MdOutlineStickyNote2 />,
       },
-      {
-        name: "message-center",
-        icon: <FiMessageSquare />,
-      },
+      // {
+      //   name: "message-center",
+      //   icon: <FiMessageSquare />,
+      // },
       {
         name: "faq",
         icon: <GoQuestion />,
@@ -112,10 +103,10 @@ export const links = [
         name: "roles",
         icon: <MdOutlineVerifiedUser />,
       },
-      {
-        name: "permission",
-        icon: <MdNotInterested />,
-      },
+      // {
+      //   name: "permission",
+      //   icon: <MdNotInterested />,
+      // },
     ],
   },
   {
@@ -161,32 +152,32 @@ export const themeColors = [
 ];
 
 export const revenue = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-  { month: "July", desktop: 614 },
-  { month: "August", desktop: 114 },
-  { month: "Semptember", desktop: 214 },
-  { month: "October", desktop: 214 },
-  { month: "November", desktop: 84 },
-  { month: "December", desktop: 280 },
+  { month: "January", revenue: 186 },
+  { month: "February", revenue: 305 },
+  { month: "March", revenue: 237 },
+  { month: "April", revenue: 73 },
+  { month: "May", revenue: 209 },
+  { month: "June", revenue: 214 },
+  { month: "July", revenue: 614 },
+  { month: "August", revenue: 114 },
+  { month: "Semptember", revenue: 214 },
+  { month: "October", revenue: 214 },
+  { month: "November", revenue: 84 },
+  { month: "December", revenue: 280 },
 ];
 export const profit = [
-  { month: "January", desktop: 16 },
-  { month: "February", desktop: 35 },
-  { month: "March", desktop: 97 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 129 },
-  { month: "June", desktop: 24 },
-  { month: "July", desktop: 64 },
-  { month: "August", desktop: 54 },
-  { month: "Semptember", desktop: 74 },
-  { month: "October", desktop: 25 },
-  { month: "November", desktop: 84 },
-  { month: "December", desktop: 20 },
+  { month: "January", revenue: 16 },
+  { month: "February", revenue: 35 },
+  { month: "March", revenue: 97 },
+  { month: "April", revenue: 73 },
+  { month: "May", revenue: 129 },
+  { month: "June", revenue: 24 },
+  { month: "July", revenue: 64 },
+  { month: "August", revenue: 54 },
+  { month: "Semptember", revenue: 74 },
+  { month: "October", revenue: 25 },
+  { month: "November", revenue: 84 },
+  { month: "December", revenue: 20 },
 ];
 
 export const services = [
@@ -474,6 +465,130 @@ export const dataAdmin = [
     email: "zagadate@gmail.com",
   },
 ];
+export const dataFAQ = [
+  {
+    id: "728ed52f",
+    category: "Cable payment",
+    title: "How to pay for cable",
+    details:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui corrupti saepe! Odit ab nulla qui necessitatibus explicabo sunt fugiat a exercitationem, libero aliquid eveniet repudiandae, neque reiciendis? Ea corrupti tempora molestiae quas blanditiis numquam facere nihil praesentium molestias odio nam autem, minus ad, illo quasi impedit cumque inventore atque.",
+  },
+  {
+    id: "728ed52f",
+    category: "Cable payment",
+    title: "How to pay for cable",
+    details:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui corrupti saepe! Odit ab nulla qui necessitatibus explicabo sunt fugiat a exercitationem, libero aliquid eveniet repudiandae, neque reiciendis? Ea corrupti tempora molestiae quas blanditiis numquam facere nihil praesentium molestias odio nam autem, minus ad, illo quasi impedit cumque inventore atque.",
+  },
+  {
+    id: "728ed52f",
+    category: "Cable payment",
+    title: "How to pay for cable",
+    details:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui corrupti saepe! Odit ab nulla qui necessitatibus explicabo sunt fugiat a exercitationem, libero aliquid eveniet repudiandae, neque reiciendis? Ea corrupti tempora molestiae quas blanditiis numquam facere nihil praesentium molestias odio nam autem, minus ad, illo quasi impedit cumque inventore atque.",
+  },
+  {
+    id: "728ed52f",
+    category: "Cable payment",
+    title: "How to pay for cable",
+    details:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui corrupti saepe! Odit ab nulla qui necessitatibus explicabo sunt fugiat a exercitationem, libero aliquid eveniet repudiandae, neque reiciendis? Ea corrupti tempora molestiae quas blanditiis numquam facere nihil praesentium molestias odio nam autem, minus ad, illo quasi impedit cumque inventore atque.",
+  },
+];
+
+export const users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    phone: "+123456789",
+    state: "Lagos",
+    status: "Active",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    phone: "+987654321",
+    state: "Owerri",
+    status: "Suspended",
+  },
+  {
+    id: 3,
+    name: "Alice Johnson",
+    email: "alice.johnson@example.com",
+    phone: "+192837465",
+    state: "Warri",
+    status: "Active",
+  },
+];
+
+export const usersInfo = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    phone: "+123456789",
+    status: "Active",
+    walletBalance: 120.5,
+    lastLogin: "2024-08-16 14:22",
+    createdAt: "2023-06-01 09:00",
+    activities: [
+      {
+        description: "Paid for electricity bill",
+        timestamp: "2024-08-15 14:30",
+      },
+      {
+        description: "Bought data bundle",
+        timestamp: "2024-08-14 12:15",
+      },
+    ],
+    transactions: [
+      {
+        type: "Electricity",
+        amount: 50.0,
+        date: "2024-08-15 14:30",
+      },
+      {
+        type: "Data",
+        amount: 20.0,
+        date: "2024-08-14 12:15",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    phone: "+987654321",
+    status: "Suspended",
+    walletBalance: 75.0,
+    lastLogin: "2024-07-25 11:45",
+    createdAt: "2023-05-21 16:22",
+    activities: [
+      {
+        description: "Suspended by admin",
+        timestamp: "2024-08-01 10:00",
+      },
+      {
+        description: "Paid for cable TV subscription",
+        timestamp: "2024-07-25 11:30",
+      },
+    ],
+    transactions: [
+      {
+        type: "Cable TV",
+        amount: 30.0,
+        date: "2024-07-25 11:30",
+      },
+      {
+        type: "Airtime",
+        amount: 10.0,
+        date: "2024-07-10 09:15",
+      },
+    ],
+  },
+];
 
 export const ticketLinks = [
   "Tickets summary",
@@ -677,6 +792,31 @@ export const AdminSummary = [
   {
     title: "Support agents",
     value: "10",
+  },
+];
+export const FaqSummary = [
+  {
+    title: "Total FAQ",
+    value: "14",
+  },
+  {
+    title: "FAQ category",
+    value: "3",
+  },
+];
+
+export const userSummary = [
+  {
+    title: "Total users",
+    value: "14",
+  },
+  {
+    title: "Active users",
+    value: "3",
+  },
+  {
+    title: "Suspended users",
+    value: "1",
   },
 ];
 

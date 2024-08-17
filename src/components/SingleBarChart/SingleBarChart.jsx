@@ -16,8 +16,8 @@ import {
 
 export function SingleBarChart({ dataTitle, barColor, chartData }) {
   const chartConfig = {
-    desktop: {
-      label: "Desktop",
+    revenue: {
+      label: "Profit",
       color: "hsl(var(--chart-1))",
     },
   };
@@ -51,7 +51,7 @@ export function SingleBarChart({ dataTitle, barColor, chartData }) {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill={barColor} radius={8}></Bar>
+            <Bar dataKey="revenue" fill={barColor} radius={8}></Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
