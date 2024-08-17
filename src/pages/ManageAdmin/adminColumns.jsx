@@ -13,10 +13,7 @@ import { Link } from "react-router-dom";
 
 const columnHelper = createColumnHelper();
 
-export const columns = [
-  columnHelper.accessor("id", {
-    header: "Ticket ID",
-  }),
+export const adminColumns = [
   columnHelper.accessor("user", {
     header: "Full name",
   }),
@@ -33,47 +30,26 @@ export const columns = [
       );
     },
   }),
-  columnHelper.accessor("amount", {
-    header: () => <div className="">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className=" font-medium">{formatted}</div>;
-    },
+  columnHelper.accessor("role", {
+    header: "Role",
   }),
   columnHelper.accessor("status", {
     header: "Status",
     cell: ({ row }) => {
       const status = row.getValue("status");
-      if (status === "pending") {
+      if (status === "inactive") {
         return (
           <div className="rounded-full text-yellow-400 bg-yellow-50 px-3 py-1 text-center w-32">
             {status}
           </div>
         );
-      } else if (status === "in progress") {
-        return (
-          <div className="rounded-full text-blue-400 bg-blue-50 px-3 py-1 text-center w-32">
-            {status}
-          </div>
-        );
-      } else if (status === "resolved") {
+      } else if (status === "active") {
         return (
           <div className="rounded-full text-green-400 bg-green-50 px-3 py-1 text-center w-32">
             {status}
           </div>
         );
-      } else if (status === "closed") {
-        return (
-          <div className="rounded-full text-red-400 bg-red-50 px-3 py-1 text-center w-32">
-            {status}
-          </div>
-        );
-      } else if (status === "escalated") {
+      } else if (status === "suspended") {
         return (
           <div className="rounded-full text-red-400 bg-red-50 px-3 py-1 text-center w-32">
             {status}
@@ -98,16 +74,15 @@ export const columns = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(ticket.id)}
-            >
-              Copy ticket ID
-            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link to={`/tickets/info/${ticket.id}`}>View ticket</Link>
+              <Link to={`/manage-admin/admin-info/${ticket.id}`}>
+                View details
+              </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem>Close ticket</DropdownMenuItem>
+            <DropdownMenuItem className="text-red-500">
+              Suspend
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

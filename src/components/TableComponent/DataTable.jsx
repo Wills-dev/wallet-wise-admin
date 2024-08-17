@@ -29,7 +29,7 @@ import {
 } from "@/components/ui/table";
 import { DataTablePagination } from "@/components/PaginationComponent/PaginationComponent";
 
-export function DataTable({ columns, data }) {
+export function DataTable({ columns, data, searchValue }) {
   const [sorting, setSorting] = React.useState([]);
   const [columnFilters, setColumnFilters] = React.useState([]);
   const [columnVisibility, setColumnVisibility] = React.useState({});
@@ -55,10 +55,10 @@ export function DataTable({ columns, data }) {
     <div className="">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Search emails..."
-          value={table.getColumn("email")?.getFilterValue() ?? ""}
+          placeholder={`Search ${searchValue}..."`}
+          value={table.getColumn(searchValue)?.getFilterValue() ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn(searchValue)?.setFilterValue(event.target.value)
           }
           className="max-w-sm outline-none  focus-within:border-none bg-white  dark:bg-secondary-dark-bg"
         />
@@ -120,7 +120,7 @@ export function DataTable({ columns, data }) {
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} className="whitespace-nowrap">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
