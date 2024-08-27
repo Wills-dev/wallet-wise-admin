@@ -12,9 +12,15 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-export function BarChartSingle({ chartConfig, chartData, description, color }) {
+export function BarChartSingle({
+  chartConfig,
+  chartData,
+  description,
+  color,
+  dataKey,
+}) {
   return (
-    <Card className="dark:bg-secondary-dark-bg">
+    <Card className="dark:bg-secondary-dark-bg ">
       <CardHeader>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
@@ -33,7 +39,7 @@ export function BarChartSingle({ chartConfig, chartData, description, color }) {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="averageTickets" fill={color} />
+            <Bar dataKey={dataKey} fill={color} />
           </BarChart>
         </ChartContainer>
       </CardContent>

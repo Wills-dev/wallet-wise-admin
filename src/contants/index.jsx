@@ -1,17 +1,13 @@
 import { AiOutlineAreaChart, AiOutlineBarChart } from "react-icons/ai";
-import { BiSolidPlaneAlt } from "react-icons/bi";
-import { FiMessageSquare, FiUsers } from "react-icons/fi";
+import { BiSolidPlaneAlt, BiTransfer } from "react-icons/bi";
+import { FiUsers } from "react-icons/fi";
 import { IoHomeOutline, IoPhonePortraitOutline } from "react-icons/io5";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { IoIosFootball } from "react-icons/io";
 import { GoDatabase, GoGift, GoQuestion } from "react-icons/go";
 import { FaRegLightbulb, FaRegUser } from "react-icons/fa";
-import {
-  MdNotInterested,
-  MdOutlineStickyNote2,
-  MdOutlineVerifiedUser,
-} from "react-icons/md";
+import { MdOutlineStickyNote2, MdOutlineVerifiedUser } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
 import { GrSecure } from "react-icons/gr";
 
@@ -50,7 +46,11 @@ export const links = [
     title: "Services",
     links: [
       {
-        name: "Airtime",
+        name: "transfers",
+        icon: <BiTransfer />,
+      },
+      {
+        name: "airtime",
         icon: <IoPhonePortraitOutline />,
       },
       {
@@ -160,11 +160,12 @@ export const revenue = [
   { month: "June", revenue: 214 },
   { month: "July", revenue: 614 },
   { month: "August", revenue: 114 },
-  { month: "Semptember", revenue: 214 },
+  { month: "September", revenue: 214 },
   { month: "October", revenue: 214 },
   { month: "November", revenue: 84 },
   { month: "December", revenue: 280 },
 ];
+
 export const profit = [
   { month: "January", revenue: 16 },
   { month: "February", revenue: 35 },
@@ -174,7 +175,7 @@ export const profit = [
   { month: "June", revenue: 24 },
   { month: "July", revenue: 64 },
   { month: "August", revenue: 54 },
-  { month: "Semptember", revenue: 74 },
+  { month: "September", revenue: 74 },
   { month: "October", revenue: 25 },
   { month: "November", revenue: 84 },
   { month: "December", revenue: 20 },
@@ -414,6 +415,105 @@ export const data = [
   },
 ];
 
+export const dataTransfer = [
+  {
+    id: "728ed52f",
+    amount: 10000,
+    user: "Wills Chisom",
+    status: "completed",
+    email: "m@example.com",
+    type: "local bank",
+  },
+  {
+    id: "489e1d442",
+    amount: 125,
+    user: "Ola Wale",
+    status: "completed",
+    email: "lyth@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "4839e1d42",
+    amount: 12005,
+    user: "John Chisom",
+    status: "cancelled",
+    email: "example@gmail.com",
+    type: "local bank",
+  },
+  {
+    id: "489e1d422",
+    amount: 2005,
+    user: "Nedz Chinedu",
+    status: "completed",
+    email: "exam@gmail.com",
+    type: "local bank",
+  },
+  {
+    id: "48922d42",
+    amount: 2225,
+    user: "Tega Chisom",
+    status: "completed",
+    email: "fly@gmail.com",
+    type: "local bank",
+  },
+  {
+    id: "48931d4234",
+    amount: 12005,
+    user: "Miracle Kelechi",
+    status: "cancelled",
+    email: "victor@gmail.com",
+    type: "local bank",
+  },
+  {
+    id: "489e1d4244",
+    amount: 125,
+    user: "Michael Chisom",
+    status: "cancelled",
+    email: "zagadate@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "489e1d4774",
+    amount: 125,
+    user: "Wills Victor",
+    status: "completed",
+    email: "thole@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "489e64244",
+    amount: 125,
+    user: "Uju Ojinnaka",
+    status: "cancelled",
+    email: "gol@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "48944d4244",
+    amount: 125,
+    status: "completed",
+    user: "Jaja Mildred",
+    email: "sluu@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "489443244",
+    amount: 125,
+    user: "Blessing  Igri",
+    status: "cancelled",
+    email: "judah@gmail.com",
+    type: "walletwise",
+  },
+  {
+    id: "48244",
+    amount: 125,
+    user: "Favour Chudy",
+    status: "cancelled",
+    email: "kelechi@gmail.com",
+    type: "walletwise",
+  },
+];
+
 export const dataAdmin = [
   {
     id: "728ed52f",
@@ -592,9 +692,9 @@ export const usersInfo = [
 
 export const ticketLinks = [
   "Tickets summary",
-  "Efficiency",
   "Assignee activity",
   "All tickets",
+  "Efficiency",
 ];
 
 export const chartData = [
@@ -691,6 +791,60 @@ export const chartData = [
   { date: "2024-06-30", createdTickets: 446, solvedTickets: 400 },
 ];
 
+export const chartData4 = [
+  { date: "2024-04-01", walletwiseAccount: 222, localAccount: 150 },
+  { date: "2024-04-02", walletwiseAccount: 97, localAccount: 180 },
+  { date: "2024-04-03", walletwiseAccount: 167, localAccount: 120 },
+  { date: "2024-04-04", walletwiseAccount: 242, localAccount: 260 },
+  { date: "2024-04-05", walletwiseAccount: 373, localAccount: 290 },
+  { date: "2024-04-06", walletwiseAccount: 301, localAccount: 340 },
+  { date: "2024-04-07", walletwiseAccount: 245, localAccount: 180 },
+  { date: "2024-04-08", walletwiseAccount: 409, localAccount: 320 },
+  { date: "2024-04-09", walletwiseAccount: 59, localAccount: 110 },
+  { date: "2024-04-10", walletwiseAccount: 261, localAccount: 190 },
+  { date: "2024-04-11", walletwiseAccount: 327, localAccount: 350 },
+  { date: "2024-04-12", walletwiseAccount: 292, localAccount: 210 },
+  { date: "2024-04-13", walletwiseAccount: 342, localAccount: 380 },
+  { date: "2024-04-14", walletwiseAccount: 137, localAccount: 220 },
+  { date: "2024-04-15", walletwiseAccount: 120, localAccount: 170 },
+  { date: "2024-04-16", walletwiseAccount: 138, localAccount: 190 },
+  { date: "2024-04-17", walletwiseAccount: 446, localAccount: 360 },
+  { date: "2024-04-18", walletwiseAccount: 364, localAccount: 410 },
+  { date: "2024-04-19", walletwiseAccount: 243, localAccount: 180 },
+  { date: "2024-04-20", walletwiseAccount: 89, localAccount: 150 },
+  { date: "2024-04-21", walletwiseAccount: 137, localAccount: 200 },
+  { date: "2024-04-22", walletwiseAccount: 224, localAccount: 170 },
+  { date: "2024-04-23", walletwiseAccount: 138, localAccount: 230 },
+  { date: "2024-04-24", walletwiseAccount: 387, localAccount: 290 },
+  { date: "2024-04-25", walletwiseAccount: 215, localAccount: 250 },
+  { date: "2024-04-26", walletwiseAccount: 75, localAccount: 130 },
+  { date: "2024-04-27", walletwiseAccount: 383, localAccount: 420 },
+  { date: "2024-04-28", walletwiseAccount: 122, localAccount: 180 },
+  { date: "2024-04-29", walletwiseAccount: 315, localAccount: 240 },
+  { date: "2024-04-30", walletwiseAccount: 454, localAccount: 380 },
+  { date: "2024-05-01", walletwiseAccount: 165, localAccount: 220 },
+  { date: "2024-05-02", walletwiseAccount: 293, localAccount: 310 },
+  { date: "2024-05-03", walletwiseAccount: 247, localAccount: 190 },
+  { date: "2024-05-04", walletwiseAccount: 385, localAccount: 420 },
+  { date: "2024-05-05", walletwiseAccount: 481, localAccount: 390 },
+  { date: "2024-05-06", walletwiseAccount: 498, localAccount: 520 },
+  { date: "2024-05-07", walletwiseAccount: 388, localAccount: 300 },
+  { date: "2024-05-08", walletwiseAccount: 149, localAccount: 210 },
+  { date: "2024-05-09", walletwiseAccount: 227, localAccount: 180 },
+  { date: "2024-05-10", walletwiseAccount: 293, localAccount: 330 },
+  { date: "2024-05-11", walletwiseAccount: 335, localAccount: 270 },
+  { date: "2024-05-12", walletwiseAccount: 197, localAccount: 240 },
+  { date: "2024-05-13", walletwiseAccount: 197, localAccount: 160 },
+  { date: "2024-05-14", walletwiseAccount: 448, localAccount: 490 },
+  { date: "2024-05-15", walletwiseAccount: 473, localAccount: 380 },
+  { date: "2024-05-16", walletwiseAccount: 338, localAccount: 400 },
+  { date: "2024-05-17", walletwiseAccount: 499, localAccount: 420 },
+  { date: "2024-05-18", walletwiseAccount: 315, localAccount: 350 },
+  { date: "2024-05-19", walletwiseAccount: 235, localAccount: 180 },
+  { date: "2024-05-20", walletwiseAccount: 177, localAccount: 230 },
+  { date: "2024-05-21", walletwiseAccount: 82, localAccount: 140 },
+];
+
 export const chartData2 = [
   { day: "Sunday", averageTickets: 186 },
   { day: "Monday", averageTickets: 305 },
@@ -699,6 +853,16 @@ export const chartData2 = [
   { day: "Thursday", averageTickets: 209 },
   { day: "Friday", averageTickets: 214 },
   { day: "Saturday", averageTickets: 237 },
+];
+
+export const chartData3 = [
+  { day: "Sunday", averageTransfer: 186 },
+  { day: "Monday", averageTransfer: 305 },
+  { day: "Tuesday", averageTransfer: 237 },
+  { day: "Wednesday", averageTransfer: 73 },
+  { day: "Thursday", averageTransfer: 209 },
+  { day: "Friday", averageTransfer: 214 },
+  { day: "Saturday", averageTransfer: 237 },
 ];
 
 export const chartDataTickets = [

@@ -87,6 +87,7 @@ const TicketSummary = ({ currentColor }) => {
           chartData={chartData2}
           description=" Average tickets created by day of the week"
           color={currentColor}
+          dataKey="averageTickets"
         />
       </div>
       <div className="flex gap-6 w-full flex-wrap py-6">
