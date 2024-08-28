@@ -23,6 +23,8 @@ import Faq from "./pages/Faq/Faq";
 import FaqCreate from "./pages/FaqCreate/FaqCreate";
 import FaqEdit from "./pages/FaqEdit/FaqEdit";
 import FaqInfo from "./pages/FaqInfo/FaqInfo";
+import Transfers from "./pages/Transfers/Transfers";
+import TransferDetails from "./pages/TransferDetails/TransferDetails";
 
 function App() {
   return (
@@ -51,6 +53,11 @@ function App() {
           <Route path="/faq/create" element={<FaqCreate />} />
           <Route path="/faq/edit/:faqId" element={<FaqEdit />} />
           <Route path="/faq/info/:faqId" element={<FaqInfo />} />
+          <Route path="/transfers" element={<Transfers />} />
+          <Route
+            path="/transfers/info/:transactionId"
+            element={<TransferDetails />}
+          />
         </Routes>
       </ContextProvider>
     </>
