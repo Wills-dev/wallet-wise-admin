@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 import { DataTable } from "../TableComponent/DataTable";
-import { dataTransfer } from "@/contants";
-import { columns } from "@/pages/Transfers/columns";
+import { allData } from "@/contants";
+import { airtimeColumn } from "@/pages/Airtime/airtimeColumn";
 
-const AllTransfers = () => {
+const AirtimeHistory = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -16,10 +16,10 @@ const AllTransfers = () => {
       }}
     >
       <div className="w-full py-10">
-        <DataTable columns={columns} data={dataTransfer} searchValue="email" />
+        <DataTable columns={airtimeColumn} data={allData} searchValue="" />
       </div>
     </motion.div>
   );
 };
 
-export default AllTransfers;
+export default AirtimeHistory;

@@ -25,6 +25,12 @@ import FaqEdit from "./pages/FaqEdit/FaqEdit";
 import FaqInfo from "./pages/FaqInfo/FaqInfo";
 import Transfers from "./pages/Transfers/Transfers";
 import TransferDetails from "./pages/TransferDetails/TransferDetails";
+import Airtime from "./pages/Airtime/Airtime";
+import AirtimeInfo from "./pages/AirtimeInfo/AirtimeInfo";
+import Cable from "./pages/Cable/Cable";
+import CableInfo from "./pages/CableInfo/CableInfo";
+import Data from "./pages/Data/Data";
+import DataInfo from "./pages/DataInfo/DataInfo";
 
 function App() {
   return (
@@ -58,6 +64,15 @@ function App() {
             path="/transfers/info/:transactionId"
             element={<TransferDetails />}
           />
+          <Route path="/airtime" element={<Airtime />} />
+          <Route
+            path="/airtime/info/:transactionId"
+            element={<AirtimeInfo />}
+          />
+          <Route path="/cable" element={<Cable />} />
+          <Route path="/cable/info/:transactionId" element={<CableInfo />} />
+          <Route path="/data" element={<Data />} />
+          <Route path="/data/info/:transactionId" element={<DataInfo />} />
         </Routes>
       </ContextProvider>
     </>
