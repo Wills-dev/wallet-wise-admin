@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
 
 import { useStateContext } from "@/context/ContextProvider";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const { currentColor } = useStateContext();
@@ -25,12 +26,13 @@ const Profile = () => {
                 </p>
               </div>
             </div>
-            <button
+            <Link
+              to="/security"
               className="mt-4 sm:mt-0 px-4 py-2  text-white rounded"
               style={{ backgroundColor: currentColor }}
             >
               Go to Security Settings
-            </button>
+            </Link>
           </div>
 
           {/* Profile Overview */}
