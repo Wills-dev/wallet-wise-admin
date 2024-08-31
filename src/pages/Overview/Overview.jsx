@@ -32,6 +32,13 @@ const Overview = () => {
   };
   const syncedServices = syncServices(services, topServices);
 
+  const chartConfig = {
+    revenue: {
+      label: "Profit",
+      color: "hsl(var(--chart-1))",
+    },
+  };
+
   return (
     <DashboardLayout>
       <div className="padding-x py-24 flex flex-col gap-6 dark:text-white">
@@ -114,6 +121,8 @@ const Overview = () => {
                 dataTitle="revenue"
                 barColor="#4535C1"
                 chartData={revenue}
+                dataKey="revenue"
+                chartConfig={chartConfig}
               />
             </div>
           </div>
@@ -128,6 +137,8 @@ const Overview = () => {
                 dataTitle="profit"
                 barColor="#36C2CE"
                 chartData={profit}
+                dataKey={"revenue"}
+                chartConfig={chartConfig}
               />
             </div>
           </div>

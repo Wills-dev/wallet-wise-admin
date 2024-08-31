@@ -1,34 +1,34 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { AnimatePresence } from "framer-motion";
 
-import { useStateContext } from "@/context/ContextProvider";
-import { dashboardLinks } from "@/contants";
-
+import AirtimeSummary from "@/components/AirtimeSummary/AirtimeSummary";
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
 import SummaryCard from "@/components/SummaryCard/SummaryCard";
-import TransferSummary from "@/components/TransferComponents/TransferSummary";
-import AllTransfers from "@/components/TransferComponents/AllTransfers";
+import AirtimeHistory from "@/components/AirtimeHistory/AirtimeHistory";
 
-const Transfers = () => {
+import { dashboardLinks } from "@/contants";
+import { useStateContext } from "@/context/ContextProvider";
+
+const Airtime = () => {
   const { currentColor } = useStateContext();
   const [currentLink, setCurrentLink] = useState(0);
-
   const generalAnalytics = [
     {
       title: "Total transactions",
-      value: "₦500,000,000,000",
+      value: "₦500,000",
     },
+
     {
-      title: "All transfers",
-      value: "1,000",
-    },
-    {
-      title: "Completed transfers",
+      title: "Completed transactions",
       value: "30",
     },
     {
-      title: "Cancelled transfers",
+      title: "Pending transactions",
+      value: "1,000",
+    },
+    {
+      title: "Cancelled transactions",
       value: "5",
     },
   ];
@@ -50,12 +50,10 @@ const Transfers = () => {
           </div>
           <SummaryCard data={generalAnalytics} />
           <AnimatePresence>
-            {currentLink === 0 && (
-              <TransferSummary currentColor={currentColor} />
-            )}
+            {currentLink === 0 && <AirtimeSummary />}
           </AnimatePresence>
           <AnimatePresence>
-            {currentLink === 1 && <AllTransfers />}
+            {currentLink === 1 && <AirtimeHistory />}
           </AnimatePresence>
         </div>
       </div>
@@ -63,4 +61,4 @@ const Transfers = () => {
   );
 };
 
-export default Transfers;
+export default Airtime;

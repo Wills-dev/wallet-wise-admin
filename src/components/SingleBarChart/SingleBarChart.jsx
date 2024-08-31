@@ -14,17 +14,17 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-export function SingleBarChart({ dataTitle, barColor, chartData }) {
-  const chartConfig = {
-    revenue: {
-      label: "Profit",
-      color: "hsl(var(--chart-1))",
-    },
-  };
+export function SingleBarChart({
+  dataTitle,
+  barColor,
+  chartData,
+  dataKey,
+  chartConfig,
+}) {
   const lastMonth = chartData.length - 1;
 
   return (
-    <Card className="border-none shadow-none  dark:bg-secondary-dark-bg p-0">
+    <Card className="border-none shadow-none w-full flex-1   dark:bg-secondary-dark-bg p-4">
       <CardHeader className="p-0 pb-2">
         <CardDescription>
           {chartData[0]?.month} - {chartData[lastMonth]?.month} 2024
@@ -51,7 +51,7 @@ export function SingleBarChart({ dataTitle, barColor, chartData }) {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="revenue" fill={barColor} radius={8}></Bar>
+            <Bar dataKey={dataKey} fill={barColor} radius={8}></Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
