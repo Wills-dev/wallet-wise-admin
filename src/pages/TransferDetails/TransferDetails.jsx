@@ -144,7 +144,7 @@ const TransferDetails = () => {
               </div>
               <div>
                 <p className="text-gray-600">
-                  <span className="font-medium">Amount:</span> $
+                  <span className="font-medium">Amount:</span> ₦
                   {transactionDetails.transaction.amount}
                 </p>
                 <p className="text-gray-600">

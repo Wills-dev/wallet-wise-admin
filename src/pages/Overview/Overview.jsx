@@ -51,7 +51,7 @@ const Overview = () => {
         <div className="flex gap-6 flex-wrap">
           <div className="bg-white dark:bg-secondary-dark-bg sm:min-w-[300px] min-w-full  dark:text-white flex-1 shadow p-4 rounded-lg">
             <h6 className="font-bold text-gray-400">Earnings</h6>
-            <p className="text-xl font-light">$20,000,000</p>
+            <p className="text-xl font-light">₦20,000,000</p>
             <SingleAreaChart />
           </div>
           <div className="  sm:min-w-[300px] min-w-full  dark:text-white flex-1 flex flex-col gap-6">
