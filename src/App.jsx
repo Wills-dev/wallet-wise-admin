@@ -31,6 +31,8 @@ import Cable from "./pages/Cable/Cable";
 import CableInfo from "./pages/CableInfo/CableInfo";
 import Data from "./pages/Data/Data";
 import DataInfo from "./pages/DataInfo/DataInfo";
+import Betting from "./pages/Betting/Betting";
+import BettingInfo from "./pages/BettingInfo/BettingInfo";
 
 function App() {
   return (
@@ -73,6 +75,11 @@ function App() {
           <Route path="/cable/info/:transactionId" element={<CableInfo />} />
           <Route path="/data" element={<Data />} />
           <Route path="/data/info/:transactionId" element={<DataInfo />} />
+          <Route path="/betting" element={<Betting />} />
+          <Route
+            path="/betting/info/:transactionId"
+            element={<BettingInfo />}
+          />
         </Routes>
       </ContextProvider>
     </>

@@ -60,9 +60,22 @@ const Sidebar = () => {
                 className={`first-letter:first-line:items-center gap-3 ml-3 mt-6 flex text-xl font-extrabold tracking-tight dark:text-white `}
                 style={{ color: currentColor }}
               >
-                <span className="text-xl">
-                  <SiShopware />
-                </span>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: activeMenu ? 0 : 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.61, 1, 0.88, 1],
+                  }}
+                  className={`${activeMenu ? "hidden" : "block"}`}
+                >
+                  <img
+                    src="/assets/images/logo-3.png"
+                    alt=""
+                    className="w-28 object-contain"
+                  />
+                </motion.span>
 
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -73,7 +86,11 @@ const Sidebar = () => {
                     ease: [0.61, 1, 0.88, 1],
                   }}
                 >
-                  WalletWise
+                  <img
+                    src="/assets/images/logo2.png"
+                    alt=""
+                    className=" h-8 object-contain"
+                  />
                 </motion.p>
               </Link>
               <motion.button
