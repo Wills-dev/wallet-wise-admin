@@ -19,6 +19,7 @@ import { UserPieChart } from "@/components/Charts/UserPieChart";
 import { formatNumber } from "@/helperFunctions";
 
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
+import { Link } from "react-router-dom";
 
 const Overview = () => {
   const syncServices = (services, topServices) => {
@@ -170,25 +171,24 @@ const Overview = () => {
               ))}
             </div>
           </div>
-          <div className="sm:min-w-[300px] min-w-full bg-white dark:bg-secondary-dark-bg    flex-1 p-4     shadow rounded-lg">
-            <h4 className="sm:text-xl font-semibold text-gray-400 mb-6">
-              Top 5 transactions
+          <div className="sm:min-w-[300px] min-w-full bg-white dark:bg-secondary-dark-bg    flex-1      shadow rounded-lg">
+            <h4 className="sm:text-xl font-semibold text-gray-400 mb-6 px-4 pt-4 pb-2">
+              Recent transactions
             </h4>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               {topTransactions.slice(0, 5).map((transaction, index) => (
-                <div className="flex-center-between gap-4" key={index}>
+                <Link
+                  to="/betting"
+                  className="gap-4 px-4 py-2 hover:bg-gray-100 transition-all duration-300 cursor-pointer"
+                  key={index}
+                >
                   <div className="">
                     <p className="font-semibold capitalize">
-                      {transaction?.firstName} {transaction?.lastName}
-                    </p>
-                    <p className="text-gray-400 text-sm">
                       {transaction.service}
                     </p>
+                    <p className="text-gray-400 text-sm">₦200,000</p>
                   </div>
-                  <p className="text-gray-400">
-                    {formatNumber(transaction?.amount)}
-                  </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

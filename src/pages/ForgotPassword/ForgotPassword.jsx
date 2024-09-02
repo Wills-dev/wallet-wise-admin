@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { IoIosArrowBack } from "react-icons/io";
@@ -32,12 +31,12 @@ const ForgotPassword = () => {
             name="email"
             id="email"
             placeholder="Enter your email"
-            className="h-10 mt-1  w-full px-2 border-1 border-gray-300 outline-none rounded-md focus:border-[#696cff] text-gray-500"
+            className="h-10 mt-1  w-full px-2 border-1 border-gray-300 outline-none rounded-md focus:border-[#5c24cc] text-gray-500"
           />
         </div>
         <button
           type="submit"
-          className="w-full h-10 bg-[#696cff] rounded-md text-white hover:bg-[#8284fb] transition-all"
+          className="w-full h-10 bg-[#5c24cc] rounded-md text-white hover:bg-[#8284fb] transition-all"
         >
           Send Reset Link
         </button>
@@ -45,7 +44,7 @@ const ForgotPassword = () => {
       <div className="flex items-center justify-center gap-2 w-full font-light py-2">
         <Link
           to="/login"
-          className="text-[#696cff] flex-center justify-center gap-2 "
+          className="text-[#5c24cc] flex-center justify-center gap-2 "
         >
           <IoIosArrowBack /> Back to login
         </Link>

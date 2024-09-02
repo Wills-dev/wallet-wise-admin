@@ -33,6 +33,8 @@ import Data from "./pages/Data/Data";
 import DataInfo from "./pages/DataInfo/DataInfo";
 import Betting from "./pages/Betting/Betting";
 import BettingInfo from "./pages/BettingInfo/BettingInfo";
+import ManageKyc from "./pages/ManageKyc/ManageKyc";
+import KycInfo from "./pages/KycInfo/KycInfo";
 
 function App() {
   return (
@@ -80,6 +82,8 @@ function App() {
             path="/betting/info/:transactionId"
             element={<BettingInfo />}
           />
+          <Route path="/manage-kyc" element={<ManageKyc />} />
+          <Route path="/manage-kyc/info/:kycId" element={<KycInfo />} />
         </Routes>
       </ContextProvider>
     </>

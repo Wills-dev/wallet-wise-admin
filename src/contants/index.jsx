@@ -5,7 +5,7 @@ import { IoHomeOutline, IoPhonePortraitOutline } from "react-icons/io5";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { IoIosFootball } from "react-icons/io";
-import { GoDatabase, GoGift, GoQuestion } from "react-icons/go";
+import { GoDatabase, GoGift, GoQuestion, GoVerified } from "react-icons/go";
 import { FaRegLightbulb, FaRegUser } from "react-icons/fa";
 import { MdOutlineStickyNote2, MdOutlineVerifiedUser } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
@@ -100,6 +100,10 @@ export const links = [
         icon: <FiUsers />,
       },
       {
+        name: "manage-kyc",
+        icon: <GoVerified />,
+      },
+      {
         name: "roles",
         icon: <MdOutlineVerifiedUser />,
       },
@@ -135,7 +139,7 @@ export const themeColors = [
   },
   {
     name: "purple-theme",
-    color: "#696cff",
+    color: "#5c24cc",
   },
   {
     name: "red-theme",

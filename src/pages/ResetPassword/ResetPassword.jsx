@@ -33,7 +33,7 @@ const ResetPassword = () => {
           <label htmlFor="email" className="font-light">
             New Password
           </label>
-          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#696cff]">
+          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#5c24cc]">
             <input
               type={inputType}
               name="password"
@@ -51,7 +51,7 @@ const ResetPassword = () => {
           <label htmlFor="email" className="font-light">
             Confirm Password
           </label>
-          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#696cff]">
+          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#5c24cc]">
             <input
               type={inputType}
               name="password"
@@ -67,7 +67,7 @@ const ResetPassword = () => {
 
         <button
           type="submit"
-          className="w-full h-10 bg-[#696cff] rounded-md text-white hover:bg-[#8284fb] transition-all"
+          className="w-full h-10 bg-[#5c24cc] rounded-md text-white hover:bg-[#8284fb] transition-all"
         >
           Set new password
         </button>
@@ -75,7 +75,7 @@ const ResetPassword = () => {
       <div className="flex items-center justify-center gap-2 w-full font-light py-2">
         <Link
           to="/login"
-          className="text-[#696cff] flex-center justify-center gap-2 "
+          className="text-[#5c24cc] flex-center justify-center gap-2 "
         >
           <IoIosArrowBack /> Back to login
         </Link>
