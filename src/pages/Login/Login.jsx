@@ -35,14 +35,14 @@ const Login = () => {
             name="email"
             id="email"
             placeholder="Enter your email"
-            className="h-10 mt-1  w-full px-2 border-1 border-gray-300 outline-none rounded-md focus:border-[#696cff] text-gray-500"
+            className="h-10 mt-1  w-full px-2 border-1 border-gray-300 outline-none rounded-md focus:border-[#5c24cc] text-gray-500"
           />
         </div>
         <div className="w-full">
           <label htmlFor="email" className="font-light">
             Password
           </label>
-          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#696cff]">
+          <div className="flex items-center justify-between h-10 mt-1  w-full px-2 border-1 border-gray-300 rounded-md focus-within:border-[#5c24cc]">
             <input
               type={inputType}
               name="password"
@@ -61,19 +61,19 @@ const Login = () => {
               type="checkbox"
               name="remember"
               id="remember"
-              className=" checked:bg-[#696cff]"
+              className=" checked:bg-[#5c24cc]"
             />
             <label htmlFor="remember" className="cursor-pointer">
               Remember Me
             </label>
           </div>
-          <Link to="/forgot-password" className="text-[#696cff]">
+          <Link to="/forgot-password" className="text-[#5c24cc]">
             Forgot Password?
           </Link>
         </div>
         <button
           type="submit"
-          className="w-full h-10 bg-[#696cff] rounded-md text-white hover:bg-[#8284fb] transition-all"
+          className="w-full h-10 bg-[#5c24cc] rounded-md text-white hover:bg-[#8284fb] transition-all"
         >
           Sign in
         </button>
